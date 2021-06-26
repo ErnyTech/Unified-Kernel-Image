@@ -106,6 +106,7 @@ The essential things to change are as follows:
   - SPLASH_ENABLE, This will enable splash screen support by default is enabled with the following configuration: `SPLASH_ENABLE=true`
   - SPLASH, specifies where to get the splash screen image (must be an absolute path pointing to an image in BMP format), by default it gets the vendor image from the ACPI with the following configuration: `SPLASH="/sys/firmware/acpi/bgrt/image"`
   - Pre-initrd/microcode, to install a microcode to load in early boot it is necessary to add a pre-initrd image containing the microcode, in the configuration there is already a preconfiguration for Intel and AMD just remove the comment (#) corresponding to the ideal preconfiguration for you to enable the loading of the microcode
+  - Image signing, to automatically sign the unified kernel image you can use mkunified by setting the certificate and key to use to sign the image
   
 ### 3) Generate the Unified Kernel Image
 Just reinstall the kernel package you want to use, for example:
